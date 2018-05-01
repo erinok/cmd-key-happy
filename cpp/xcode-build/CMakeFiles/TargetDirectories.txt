@@ -1,0 +1,3 @@
+/Users/erin/3p/cmd-key-happy/cpp/xcode-build/CMakeFiles/rebuild_cache.dir
+/Users/erin/3p/cmd-key-happy/cpp/xcode-build/CMakeFiles/edit_cache.dir
+/Users/erin/3p/cmd-key-happy/cpp/xcode-build/CMakeFiles/cmd-key-happy.dir
