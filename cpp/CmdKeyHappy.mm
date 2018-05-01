@@ -83,8 +83,12 @@ OSStatus CmdKeyHappy::eventHandler(EventHandlerCallRef callref,
   switch (GetEventKind(event)) {
     case kEventAppFrontSwitched: {
       ProcessInfo proc(psn);
-      if (proc && ckh->isAppRegistered(proc.name()))
+      if (proc && ckh->isAppRegistered(proc.name())) {
+        std::cerr << "yay register: " << proc.name() << std::endl;
         ckh->tapApp(proc);
+      } else {
+        std::cerr << "not registered: " << proc.name() << std::endl;
+      }
       break;
     }
     case kEventAppTerminated:

@@ -29,6 +29,7 @@
 #import <Carbon/Carbon.h>
 #include <map>
 #include <set>
+#include <iostream>
 #include "ProcessList.hpp"
 
 namespace frobware {
@@ -44,6 +45,7 @@ class CmdKeyHappy {
   // Register a process with a list of key sequence exclusions.
   template<typename Input>
   void registerProcess(const std::string& appname, Input first, Input last) {
+    std::cerr << "registering «" << appname << "»" << std::endl;
     ExcludeKeySet& x = _appMap[appname];
     std::copy(first, last, std::inserter(x, x.begin()));
   }
